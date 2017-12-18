@@ -33,3 +33,9 @@ shiftAtomX = over (point . x) (+ 1)
 
 shiftMoleculeX :: Molecule -> Molecule
 shiftMoleculeX = over (atoms . traverse . point . x) (+ 1)
+
+
+-- let atom = Atom { _element = "C", _point = Point { _x = 1.0, _y = 2.0 } }
+-- let atom1 = Atom { _element = "C", _point = Point { _x = 1.0, _y = 2.0 } }
+-- let atom2 = Atom { _element = "O", _point = Point { _x = 3.0, _y = 4.0 } }
+-- atom^.point.x
